@@ -14,12 +14,12 @@
 
 }
 
-/*==== home page register form styling=====*/
+/*==== home page register form styling , his has three class names =====*/
 
 .Login.form form{
 
     display: flex;
-  align-items: center;
+  align-items: flex-end;
   background-color: #0622c5;
   color: white;
   padding: 20px;

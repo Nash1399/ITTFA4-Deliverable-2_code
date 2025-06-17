@@ -12,10 +12,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
         const email = document.getElementById("email").value.trim();
         const password = document.getElementById("password").value.trim();
-
+// Variabiales to verify user input to database 
         const matchedUser = demoUsers.find(
             user => user.email === email && user.password === password
         );
+        // verification selection statement 
 
         if (matchedUser) {
             alert("Login successful! Welcome back.");
