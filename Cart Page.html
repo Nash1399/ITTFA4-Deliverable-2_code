@@ -3,7 +3,7 @@
 <meta charset="utf-8">
 
 <head> 
-    <title>BBQ</title>
+    <title>Cart Page</title>
       <!-- Style sheet  -->
 
 <link rel="stylesheet" href = "restaurant styles.css">
@@ -18,14 +18,10 @@
     
       <ul>
         <li class="dropdown">
-             <a href="#">BBQ</a>
+             <a href="#">Cart</a>
              <ul class="dropdown-content">
-                 <a href="Flame Grilled.html">Flame Grilled</a><br>
-                <a href="Seafood.html">Seafood</a><br>
-                 <a href="Vegetarian.html">Vegetarian</a><br>
-                 <a href="Mexican.html">Mexican</a><br>
-                
-                  <a href="Texan Style BBQ.html">Texan Style BBQ</a><br>
+               
+                <a href="Menu Selection.html">Main Menu</a> 
       
       </ul>
         
@@ -35,11 +31,16 @@
 
     <div>
         <form> 
-             <button type="button" onclick = "window.location.href='Menu Selection.html'"> Back to home</button>
+             <button type="button" onclick = "window.location.href='Menu Selection.html'"> Book For Collection </button>
              <br>
-             <button type="button" onclick = "window.location.href='Cart Page.html'"> Checkout</button>
+             <button type="button" onclick = "window.location.href='Date Selection.html'"> Book a date</button>
             
-    
+                    <br>
+             <label for="Address">Address </label><br>
+            <input type="text" id="address" name="address" placeholder="Your home address" required><br><br>
+ <button type="button" onclick = "confirmAddress()"= >Confirm Address</button>
+
+
         </form>
     </div>
   </section>
