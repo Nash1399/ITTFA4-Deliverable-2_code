@@ -1,28 +1,50 @@
 // user-verification.js
 
-// Hardcoded users for demo
-const demoUsers = [
-    { email: "demo@user.com", password: "demo123" },
-    { email: "admin@site.com", password: "admin" }
-];
-
 document.addEventListener("DOMContentLoaded", function () {
-    document.getElementById("loginForm").addEventListener("submit", function (e) {
-        e.preventDefault();
+    const loginForm = document.getElementById("loginForm");
+//IndexedDB lets you store and retrieve objects that are indexed with a key
+    const request = indexedDB.open("UserDatabase", 1);
+    let db;
 
-        const email = document.getElementById("email").value.trim();
-        const password = document.getElementById("password").value.trim();
-// Variabiales to verify user input to database 
-        const matchedUser = demoUsers.find(
-            user => user.email === email && user.password === password
-        );
-        // verification selection statement 
-
-        if (matchedUser) {
-            alert("Login successful! Welcome back.");
-            window.location.href = "Menu Selection.html";
-        } else {
-            alert("Invalid email or password. Try again.");
+    request.onupgradeneeded = function (e) {
+        db = e.target.result;
+        // Ensure the users store exists in case login happens before registration
+        if (!db.objectStoreNames.contains("users")) {
+            db.createObjectStore("users", { keyPath: "email" });
         }
-    });
+    };
+
+    request.onsuccess = function (e) {
+        db = e.target.result;
+
+        loginForm.addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            const email = document.getElementById("email").value.trim();
+            const password = document.getElementById("password").value.trim();
+
+            const transaction = db.transaction(["users"], "readonly");
+            const store = transaction.objectStore("users");
+
+            const getRequest = store.get(email);
+
+            getRequest.onsuccess = function () {
+                const user = getRequest.result;
+                if (user && user.password === password) {
+                    alert("Login successful! Welcome back.");
+                    window.location.href = "Menu Selection.html";
+                } else {
+                    alert("Invalid email or password. Try again.");
+                }
+            };
+
+            getRequest.onerror = function () {
+                alert("Error accessing local database.");
+            };
+        });
+    };
+
+    request.onerror = function () {
+        alert("Failed to open local database.");
+    };
 });
