@@ -19,14 +19,31 @@
       <ul>
         <li class="dropdown">
              <a href="#">Cart</a>
-             <ul class="dropdown-content">
-               
-                <a href="Menu Selection.html">Main Menu</a> 
-      
+           
       </ul>
         
   </nav>
+  <!-- Cart Display Section -->
+<section id="cartDisplay">
+  <h2>Your Selected Items</h2>
+  <table id="cartTable">
+    <thead>
+      <tr>
+        <th>Item</th>
+        <th>Subcategory</th>
+        <th>Qty</th>
+        <th>Price</th>
+        <th>Total</th>
+        <th>Remove</th>
+      </tr>
+    </thead>
+    <tbody id="cartItems"></tbody>
+  </table>
+  <p id="cartTotal"><strong>Total: $0.00</strong></p>
+</section>
 
+
+<!--Checkout Section-->
   <section class="checkout_section">
 
     <div>
@@ -44,11 +61,11 @@
         </form>
     </div>
   </section>
-<!-- address verification  -->
+<!-- address verification js  -->
 
 <script src="user address verificiation.js"></script>   
 
-<!-- confirm booking-->
+<!-- confirm booking js-->
 
 <script src="confirmBooking.js"></script>   
 
