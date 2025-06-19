@@ -10,7 +10,7 @@
         alert("Cart is cleared.");
          localStorage.removeItem("cart");
         
-        window.location.href = "Cart Page.html";
+        window.location.href = "Menu Selection.html";
     } else {
         alert("Cart not cleared.");
     }
