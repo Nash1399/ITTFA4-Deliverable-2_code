@@ -1,6 +1,17 @@
 // clear cart verification
 
   function clearCart() {
-    alert("Cart is cleared");
-    // You can also add code here to actually clear the cart if needed
+
+    //create the clear cart confirmation dialog 
+    const confirmClear = confirm("Your cart will be cleared. Are you sure?");
+
+    if (confirmClear) {
+      //clear cart
+        alert("Cart is cleared.");
+         localStorage.removeItem("cart");
+        
+        window.location.href = "Cart Page.html";
+    } else {
+        alert("Cart not cleared.");
+    }
   }

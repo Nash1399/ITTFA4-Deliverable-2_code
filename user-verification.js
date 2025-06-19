@@ -3,7 +3,7 @@
 document.addEventListener("DOMContentLoaded", function () {
     const loginForm = document.getElementById("loginForm");
 //IndexedDB lets you store and retrieve objects that are indexed with a key
-    const request = indexedDB.open("UserDatabase", 1);
+    const request = indexedDB.open("UserDatabase", 1); // opens created db 
     let db;
 
     request.onupgradeneeded = function (e) {
