@@ -3,7 +3,7 @@
   function clearCart() {
 
     //create the clear cart confirmation dialog 
-    const confirmClear = confirm("Your cart will be cleared. Are you sure?");
+    const confirmClear = confirm("Your cart will be cleared. Are you sure?");  // "confirm " a bool function in js (y/n)
 
     if (confirmClear) {
       //clear cart
