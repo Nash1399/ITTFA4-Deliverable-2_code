@@ -2,9 +2,9 @@
 
 document.addEventListener("DOMContentLoaded", function () {
     const form = document.getElementById("Registraionform");  // gets data from registrarion form
-//IndexedDB lets you store and retrieve objects that are indexed with a key
 
-    const request = indexedDB.open("UserDatabase", 1); // opens the database that was created 
+
+    const request = indexedDB.open("UserDatabase", 1); // opens the database that was created ,//IndexedDB lets you store and retrieve objects that are indexed with a key 
     let db;
 
     request.onupgradeneeded = function (e) {
@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     request.onsuccess = function (e) {
         db = e.target.result;
-
+       // adds input from register form to db 
         form.addEventListener("submit", function (e) {
             e.preventDefault();
 

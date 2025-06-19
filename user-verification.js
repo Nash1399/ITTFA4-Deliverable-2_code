@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     request.onsuccess = function (e) {
         db = e.target.result;
-
+       // checks entered details against indexeddb 
         loginForm.addEventListener("submit", function (e) {
             e.preventDefault();
 
@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
             const store = transaction.objectStore("users");
 
             const getRequest = store.get(email);
-
+//check if user exists in indexeddb
             getRequest.onsuccess = function () {
                 const user = getRequest.result;
                 if (user && user.password === password) {
@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     alert("Invalid email or password. Try again.");
                 }
             };
-
+               //  data access failure 
             getRequest.onerror = function () {
                 alert("Error accessing local database.");
             };
