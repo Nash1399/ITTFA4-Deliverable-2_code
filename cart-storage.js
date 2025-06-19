@@ -2,9 +2,10 @@
 function addToCart(itemName, category, subcategory, price) {
   const user_email = localStorage.getItem("loggedInEmail");
 
+  // enusres that login must happen before placing orderes
   if (!user_email) {
     alert("Please log in before adding items to the cart.");
-    window.location.href = "Login Page.html";
+    window.location.href = "Login Page.html"; //takes to login page if user not logged in 
     return;
   }
 
@@ -32,6 +33,7 @@ function addToCart(itemName, category, subcategory, price) {
       added_at: new Date().toISOString()
     });
   }
+// add selected products to cart
 
   localStorage.setItem("cart", JSON.stringify(cart));
   alert(`${itemName} has been added to your cart!`);
