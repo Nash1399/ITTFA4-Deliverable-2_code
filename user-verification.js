@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 if (user && user.password === password) {
                     alert("Login successful! Welcome back.");
                     window.location.href = "Menu Selection.html";
-                    localStorage.setItem("loggedInEmail", email); // stores email logged in
+                    localStorage.setItem("loggedInEmail", email); // stores email logged in to local storage
 
                 } else {
                     alert("Invalid email or password. Try again.");
