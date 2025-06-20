@@ -1,4 +1,4 @@
-// cart manager js 
+// cart storage js 
 function addToCart(itemName, category, subcategory, price) {
   const user_email = localStorage.getItem("loggedInEmail");
 

@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const cartTotalDisplay = document.getElementById("cartTotal");
 
   const userEmail = localStorage.getItem("loggedInEmail");
-  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+  let cart = JSON.parse(localStorage.getItem("cart")) || []; //gets the current items and total for items for logged on email 
 
   // Filter cart for current user
   cart = cart.filter(item => item.user_email === userEmail);
