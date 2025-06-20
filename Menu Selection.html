@@ -3,6 +3,10 @@
     <meta charset="utf-8">
 <head>
 <title>Menus Page </title>
+ <!-- Style sheet  -->
+
+<link rel="stylesheet" href = "restaurant styles.css">
+    
   <!--Navigation Pane -->
 <nav>
     <ul>
@@ -19,6 +23,50 @@
 </head>
 <body  class="menu">
 
+<section class="menu-selection">
+  <h2>Select a Menu Category</h2>
+  <table class="menu-table">
+    <thead>
+      <tr>
+        <th>Category</th>
+        <th>Description</th>
+        <th>Go to Menu</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr onclick="window.location.href='Mexican.html'">
+        <td>Mexican</td>
+        <td>Spicy and savory Mexican delights</td>
+        <td><button>View</button></td>
+      </tr>
+      <tr onclick="window.location.href='BBQ.html'">
+        <td>BBQ</td>
+        <td>Barbecue favorites including ribs and wings</td>
+        <td><button>View</button></td>
+      </tr>
+      <tr onclick="window.location.href='Flame Grilled.html'">
+        <td>Flame Grilled</td>
+        <td>Perfectly grilled meats and more</td>
+        <td><button>View</button></td>
+      </tr>
+      <tr onclick="window.location.href='Seafood.html'">
+        <td>Seafood</td>
+        <td>Fresh ocean flavors</td>
+        <td><button>View</button></td>
+      </tr>
+      <tr onclick="window.location.href='Vegetarian.html'">
+        <td>Vegetarian</td>
+        <td>Delicious meat-free meals</td>
+        <td><button>View</button></td>
+      </tr>
+      <tr onclick="window.location.href='Texan Style BBQ.html'">
+        <td>Texan Style BBQ</td>
+        <td>Bold, smoky Texas-style dishes</td>
+        <td><button>View</button></td>
+      </tr>
+    </tbody>
+  </table>
+</section>
 
     
 </body>
