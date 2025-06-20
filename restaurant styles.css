@@ -7,25 +7,25 @@ body {
 
 /* Home Page Background */
 body.home {
-  background: url('Restaurant-home.jpg') no-repeat center center fixed;
+  background-color: black;
   background-size: cover;
 }
 
 /* Login Page Background */
 body.login {
-  background: url('Restaurant-loging.jpg') no-repeat center center fixed;
+   background-color: black;
   background-size: cover;
 }
 
 /* Register Page Background */
 body.register {
-  background: url('Restaurant-register.jpg') no-repeat center center fixed;
+   background-color: black;
   background-size: cover;
 }
 
 /* Menu Page Background */
 body.menu {
-  background: url('Restaurant-menu.jpg') no-repeat center center fixed;
+ background-color: black;
   background-size: cover;
 }
 
