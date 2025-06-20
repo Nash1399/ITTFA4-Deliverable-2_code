@@ -70,7 +70,7 @@ nav ul li a:hover {
 section {
   padding: 20px;
   margin: 20px;
-  background-color: white;
+  background-color: #C5A47B;
   border-radius: 10px;
   box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
@@ -104,14 +104,14 @@ th {
 button {
   padding: 6px 12px;
   background-color: #0622c5;
-  color: white;
+  color: #C5A47B;
   border: none;
   border-radius: 5px;
   cursor: pointer;
 }
 
 button:hover {
-  background-color: #041a9c;
+  background-color: white;
 }
 
 /* ==== Home Page Register Form Styling ==== */
@@ -121,7 +121,7 @@ button:hover {
   display: flex;
   align-items: center;
   background-color: #0622c5;
-  color: white;
+  color: #C5A47B;
   padding: 20px;
   border-radius: 10px;
   width: 45%;
@@ -133,7 +133,7 @@ button:hover {
 /*== This has two class names: Login, form, ===*/
 .Login.form form {
   background-color: #0622c5;
-  color: white;
+  color: #C5A47B;
   padding: 20px;
   border-radius: 10px;
   width: 45%;
@@ -146,14 +146,13 @@ button:hover {
 .Register.page.form form {
   align-items: center;
   background-color: #0624cc;
-  color: white;
+  color: #C5A47B;
   padding: 20px;
   border-radius: 10px;
   width: 45%;
   transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
-
 /* ==== Responsiveness styling ==== */
 @media (max-width: 1024px) {
   .Registraion.form form,
