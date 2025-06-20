@@ -1,0 +1,83 @@
+<!doctype html>
+<html>
+<meta charset="utf-8">
+
+<head> 
+    <title>Date Confirmation</title>
+      <!-- Style sheet  -->
+
+<link rel="stylesheet" href = "restaurant styles.css">
+    
+     
+
+</head>
+<body>
+     <!-- Navigation pane-->
+     
+<nav>
+    
+      <ul>
+        <li class="dropdown">
+             <a href="#">Confrim Date</a>
+           
+      </ul>
+        
+  </nav>
+  <!-- Cart Display Section -->
+<section id="cartDisplay">
+  <h2>Your Selected Items</h2>
+  <table id="cartTable">
+    <thead>
+      <tr>
+        <th>Item</th>
+        <th>Subcategory</th>
+        <th>Qty</th>
+        <th>Price</th>
+        <th>Total</th>
+        <th>Remove</th>
+      </tr>
+    </thead>
+    <tbody id="cartItems"></tbody>
+  </table>
+  <p id="cartTotal"><strong>Total: $0.00</strong></p>
+</section>
+
+
+<!--Checkout Section-->
+  <section class="date Selection">
+
+    <div>
+        <form id = "date_form"> 
+             <label for="Booking date ">Booking (date and time Till 21:00):</label>
+  <input type="datetime-local" id="booking_date" name="booking_date">
+
+  <button type="button" onclick =  "confirmdate()" >Confirm Date</button>
+        </form>
+    </div>
+  </section>
+
+<!-- confirm booking js-->
+
+<script src="confirmBooking.js"></script>   
+
+<!-- confirm date-->
+
+</body>
+<footer>
+<section class="footer page ">
+<div>
+    <p><strong> Even your taste buds will be impressed </strong></p>
+</div>
+<div class="About us">
+
+    <form>
+        <p> Follow Us on Social Media </p>
+
+        <button type ="button" onclick="window.location.href='https://www.instagram.com/'" > Follow Us </button>
+    </form>
+
+</div>
+</section>
+
+</footer>
+</html>

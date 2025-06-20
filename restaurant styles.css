@@ -1,3 +1,35 @@
+/* Generic fallback */
+body {
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+/* Home Page Background */
+body.home {
+  background: url('Restaurant-home.jpeg') no-repeat center center fixed;
+  background-size: cover;
+}
+
+/* Login Page Background */
+body.login {
+  background: url('Restaurant-loging.jpeg') no-repeat center center fixed;
+  background-size: cover;
+}
+
+/* Register Page Background */
+body.register {
+  background: url('Restaurant-register.jpeg') no-repeat center center fixed;
+  background-size: cover;
+}
+
+/* Menu Page Background */
+body.menu {
+  background: url('Restaurant-menu.jpeg') no-repeat center center fixed;
+  background-size: cover;
+}
+
+
 /* ==== Body Styling ==== */
 body {
   font-family: Arial, sans-serif;
@@ -153,6 +185,14 @@ button:hover {
   transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
+
+/* Home Page Background */
+body {
+  background: url('Restaurant-home.jpeg') no-repeat center center fixed;
+  background-size: contain; /* Ensures the entire logo is visible */
+  background-color: #f4f4f4; /* Fallback background color */
+}
+
 /* ==== Responsiveness styling ==== */
 @media (max-width: 1024px) {
   .Registraion.form form,
