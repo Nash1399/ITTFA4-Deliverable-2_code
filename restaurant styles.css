@@ -66,7 +66,7 @@ nav ul li a:hover {
   background-color: #061899;
 }
 
-/* ==== Subcategory Page Section Styling (Seafood, Texan BBQ, Vegetarian etc.) ==== */
+/* ==== Subcategory  Menu Page Section Styling  ==== */
 section {
   padding: 20px;
   margin: 20px;
@@ -115,6 +115,8 @@ button:hover {
 }
 
 /* ==== Home Page Register Form Styling ==== */
+/*== This has two class names: Registration , form, ===*/
+
 .Registraion.form form {
   display: flex;
   align-items: center;
@@ -128,6 +130,7 @@ button:hover {
 }
 
 /* ==== Login Form Styling ==== */
+/*== This has two class names: Login, form, ===*/
 .Login.form form {
   background-color: #0622c5;
   color: white;
@@ -139,6 +142,7 @@ button:hover {
 }
 
 /* ==== Register Page Form Styling ==== */
+/*== This has three class names: Register, page, and form.===*/
 .Register.page.form form {
   align-items: center;
   background-color: #0624cc;
@@ -148,4 +152,63 @@ button:hover {
   width: 45%;
   transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* ==== Responsiveness styling ==== */
+@media (max-width: 1024px) {
+  .Registraion.form form,
+  .Login.form form,
+  .Register.page.form form {
+    width: 70%;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .Registraion.form form,
+  .Login.form form,
+  .Register.page.form form {
+    width: 90%;
+    padding: 15px;
+  }
+
+  section {
+    margin: 10px;
+    padding: 15px;
+  }
+
+  table, th, td {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .dropdown-content {
+    position: static;
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  button {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+  }
+
+  nav ul li a {
+    padding: 10px;
+    width: 100%;
+  }
 }
